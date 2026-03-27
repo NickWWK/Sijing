@@ -56,6 +56,12 @@ fetch("question.json")
   }, 1000);
 }
 
+document.querySelector('.btn-start').addEventListener('click', function() {
+  timerEl.classList.add('active'); // display timer
+  startTimer(); 
+});
+
+
 function timeUp() {
    const buttons = optionsEl.querySelectorAll("button");
   buttons.forEach(btn => btn.disabled = true);
